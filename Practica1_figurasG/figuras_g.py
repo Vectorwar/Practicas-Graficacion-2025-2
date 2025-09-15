@@ -1,5 +1,5 @@
 """En esta practia vamos a generar figuras con turtle."""
-# pylint: disable=no-member
+# pylint: disable=no-member # Deshabilita los errores molestos del pylint con turtle, debido a que de tantos me salia 0.00 el score.
 import turtle
 t = turtle.Turtle()
 
