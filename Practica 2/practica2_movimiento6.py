@@ -8,7 +8,7 @@ t.title("Mover con las flechas el cuadrado")
 PANTALLA = t.Screen()
 PANTALLA.setup(600, 600)
 PANTALLA.bgcolor("lightblue")
-lado = 90 #Parametro global para el lado del cuadrado
+LADO = 90 #Parametro global para el lado del cuadrado
 
 def teleport (x:float, y:float): #Segui usando el teleport para dibujar mi figura en cierto punto
     """Aqui movemos el cuadrado a la posicion (x, y)"""
@@ -16,13 +16,13 @@ def teleport (x:float, y:float): #Segui usando el teleport para dibujar mi figur
     t.goto(x, y)
     t.pendown()
 
-def cuadrado (lado):
+def cuadrado (LADO:float):
     """Aqui dibujamos un cuadrado tomando el lado especificado."""
     t.color("black", "yellow")
     t.fillcolor("yellow")
     t.begin_fill()
     for _ in range(4):
-        t.forward(lado)
+        t.forward(LADO)
         t.right(90)
     t.end_fill()
 def w():
@@ -31,7 +31,7 @@ def w():
     t.setheading(90) #Este metodo de la torguga gira la tortuga a un angulo especifico segun la direccion de las agujas del reloj.
     t.fd(50)
     t.clear() # El metodo clear limpia los dibujos hechos por la tortuga.
-    cuadrado(lado)
+    cuadrado(LADO)
 
 def s():
     """Mover hacia abajo"""
@@ -39,14 +39,14 @@ def s():
     t.setheading(270)
     t.fd(50)
     t.clear()
-    cuadrado(lado)
+    cuadrado(LADO)
 def a():
     """Mover hacia la izquierda"""
     t.penup()
     t.setheading(180)
     t.fd(50)
     t.clear()
-    cuadrado(lado)
+    cuadrado(LADO)
 def d():
     """Mover hacia la derecha"""
     t.penup()
@@ -66,11 +66,10 @@ def controles_teclas():
 def main():
     """Funcion principal"""
     teleport(-50, 100)
-    cuadrado(lado)
+    cuadrado(LADO)
     t.speed(0)
     controles_teclas()
     PANTALLA.mainloop()
     
-
 if __name__ == "__main__":
      main()
