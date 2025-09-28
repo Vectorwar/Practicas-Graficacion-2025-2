@@ -1,0 +1,35 @@
+# Archivo de instrucciones 
+# Cada línea es un comando ya definido en el .py
+
+# Dibujar un cuadrado rojo
+teleport -200 100
+cuadrado 80
+
+# Dibujar un triangulo azul  
+teleport 0 100
+triangulo 70
+
+# Dibujar un circulo morado
+teleport 150 50
+circulo 40
+
+# Dibujar una linea naranja
+teleport -100 -50
+linea 100
+
+# Movimientos basicos
+teleport -200 -100
+color green
+avanzar 50
+girar 90
+avanzar 50
+
+# Mas figuras
+teleport 50 -100
+cuadrado 40
+
+teleport 150 -100  
+triangulo 45
+
+# Volver al centro
+casa
